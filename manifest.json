@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Quick Copy Helper",
+    "version": "1.0",
+    "description": "Automatically copy selected text with formatting options",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "storage",
+      "clipboardWrite"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "48": "icon48.png",
+        "128": "icon128.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
